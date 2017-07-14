@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace E01_MaxSequenceOfEqualElements
 {
-    class Program
+    class E01_MaxSequenceOfEqualElements
     {
         static void Main(string[] args)
         {
