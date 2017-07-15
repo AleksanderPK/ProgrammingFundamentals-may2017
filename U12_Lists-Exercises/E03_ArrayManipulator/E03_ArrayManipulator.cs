@@ -8,14 +8,12 @@ namespace E03_ArrayManipulator
     {
         public static void Main(string[] args)
         {
-            var inputList = //new List<int>() { 1, 2, 3, 4};
-            Console.ReadLine()
+            var inputList = Console.ReadLine()
             .Split(' ')
             .Select(int.Parse)
             .ToList();
 
-            var commandLine = // new List<string>() { "sumPairs", "2", };
-            Console.ReadLine()
+            var commandLine = Console.ReadLine()
             .Split(' ')
             .ToList();
 
