@@ -4,7 +4,6 @@ using System.Linq;
 
 namespace E2_LongestIncreasingSubsequence
 {
-    class E2_LongestIncreasingSubsequence
     {
         static void Main(string[] args)
         {
