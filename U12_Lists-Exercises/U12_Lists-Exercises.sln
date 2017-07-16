@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E04_SumReversedNumbers", "E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E05_BombNumbers", "E05_BombNumbers\E05_BombNumbers.csproj", "{78E7F3C3-641D-4368-829B-38E75BAF6FB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E2_LongestIncreasingSubsequence", "E2_LongestIncreasingSubsequence\E2_LongestIncreasingSubsequence.csproj", "{06879758-3F0F-48C5-A8ED-9A47CD787E9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E02_LongestIncreasingSubsequence", "E2_LongestIncreasingSubsequence\E02_LongestIncreasingSubsequence.csproj", "{06879758-3F0F-48C5-A8ED-9A47CD787E9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
