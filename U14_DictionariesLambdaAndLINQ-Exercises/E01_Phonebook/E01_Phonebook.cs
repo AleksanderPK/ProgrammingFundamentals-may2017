@@ -11,15 +11,13 @@ namespace E01_Phonebook
             var inputLine = Console.ReadLine()
                 .Split(' ')
                 .ToArray();
-
             var phonebook = new Dictionary<string, string>();
             var command = inputLine[0];
             var name = string.Empty;
             var phoneNumber = string.Empty;
             
             while (command != "END")
-            {
-                
+            {                
                 switch (command)
                 {
                     case "A":
