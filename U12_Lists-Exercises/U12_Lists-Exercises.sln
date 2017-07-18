@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E04_SumReversedNumbers", "E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E05_BombNumbers", "E05_BombNumbers\E05_BombNumbers.csproj", "{78E7F3C3-641D-4368-829B-38E75BAF6FB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E02_LongestIncreasingSubsequence", "E02_LongestIncreasingSubsequence\E02_LongestIncreasingSubsequence.csproj", "{7483F9BD-FF5D-47D9-B393-C917C7AD13C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{78E7F3C3-641D-4368-829B-38E75BAF6FB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78E7F3C3-641D-4368-829B-38E75BAF6FB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78E7F3C3-641D-4368-829B-38E75BAF6FB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7483F9BD-FF5D-47D9-B393-C917C7AD13C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7483F9BD-FF5D-47D9-B393-C917C7AD13C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7483F9BD-FF5D-47D9-B393-C917C7AD13C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7483F9BD-FF5D-47D9-B393-C917C7AD13C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
