@@ -30,7 +30,6 @@ namespace E01_Phonebook
                         name = inputLine[1];
                         if (phonebook.ContainsKey(name))
                         {
-
                             Console.WriteLine($"{name} -> {phoneNumber}");
                         }
                         else

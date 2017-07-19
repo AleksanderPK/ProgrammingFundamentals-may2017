@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E01_Phonebook", "E01_Phoneb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E03_AMinerTask", "E03_AMinerTask\E03_AMinerTask.csproj", "{5E2A66EB-8A06-4728-888C-8E93BD4AC227}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E04_FixEmails", "E04_FixEmails\E04_FixEmails.csproj", "{7AE08A70-5B43-4FE4-ADF1-9AECA988C6A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5E2A66EB-8A06-4728-888C-8E93BD4AC227}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E2A66EB-8A06-4728-888C-8E93BD4AC227}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E2A66EB-8A06-4728-888C-8E93BD4AC227}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AE08A70-5B43-4FE4-ADF1-9AECA988C6A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AE08A70-5B43-4FE4-ADF1-9AECA988C6A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AE08A70-5B43-4FE4-ADF1-9AECA988C6A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AE08A70-5B43-4FE4-ADF1-9AECA988C6A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
