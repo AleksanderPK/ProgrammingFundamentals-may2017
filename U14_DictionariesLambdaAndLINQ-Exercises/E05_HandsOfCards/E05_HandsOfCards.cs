@@ -34,7 +34,7 @@ namespace E05_HandsOfCards
                 cards = input.Skip(1).ToArray();
             }
 
-            playersCards = RemoveRepitedCards(playersCards);
+            playersCards = RemoveRepeatedCards(playersCards);
 
             foreach (var kvp in playersCards)
             {
@@ -81,7 +81,7 @@ namespace E05_HandsOfCards
             }
             return result;
         }
-        private static Dictionary<string, string> RemoveRepitedCards(Dictionary<string, string> playersCards)
+        private static Dictionary<string, string> RemoveRepeatedCards(Dictionary<string, string> playersCards)
         {
             var result = new Dictionary<string, string>();
             
