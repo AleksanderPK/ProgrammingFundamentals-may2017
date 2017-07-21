@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Globalization;
 
 namespace E05_HandsOfCards
 {
@@ -11,40 +8,40 @@ namespace E05_HandsOfCards
     {
         static void Main(string[] args)
         {
-            var separators = new char[] { ' ', ',', ':' }; 
-            var input = Console.ReadLine()
-                .Split(separators, StringSplitOptions.RemoveEmptyEntries)
-                .ToArray();
-            var playersCards = new Dictionary<string, string>();
-            var playersResults = new Dictionary<string, int>();
-            var player = input[0];
-            var cards = input.Skip(1).ToArray();
 
-            while (player != "JOKER")
+            var playersCards = new Dictionary<string, List<string>>();                
+            GetHandsOfCards(playersCards);
+            foreach (var player in playersCards)
             {
+                Console.WriteLine($"{player.Key} - > {ConvertCardsInPoints(player.Value)}");
+            }                        
+        }
+
+        private static void GetHandsOfCards(Dictionary<string, List<string>> playersCards)
+        {
+            var input = Console.ReadLine();
+
+            while (input != "JOKER")
+            {
+                var player = input.Split(':').First();
+                var cards = input
+                    .Remove(0, input.IndexOf(':') + 1)
+                    .Split(new char[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries)
+                    .ToList<string>();
+
                 if (!playersCards.ContainsKey(player))
                 {
-                    playersCards[player] = string.Empty;
+                    playersCards[player] = new List<string>();
                 }
-                playersCards[player] = string.Concat(playersCards[player] + " ", string.Join(" ", cards));
-                input = Console.ReadLine()
-                    .Split(separators, StringSplitOptions.RemoveEmptyEntries)
-                    .ToArray();
-                player = input[0];
-                cards = input.Skip(1).ToArray();
-            }
 
-            playersCards = RemoveRepeatedCards(playersCards);
-
-            foreach (var kvp in playersCards)
-            {
-                var cardsAsArray = kvp.Value
-                    .Split(separators, StringSplitOptions.RemoveEmptyEntries)
-                    .ToArray();
-                Console.WriteLine($"{kvp.Key}: {ConvertCardsInPoints(cardsAsArray)}");
+                playersCards[player] = playersCards[player].Concat(cards).ToList();
+                playersCards[player] = playersCards[player].Distinct().ToList();
+                
+                input = Console.ReadLine();
             }
-        }  
-        private static int ConvertCardsInPoints(string[] cards)
+        }
+
+        private static int ConvertCardsInPoints(List<string> cards)
         {
             var sum = 0;
 
@@ -58,7 +55,10 @@ namespace E05_HandsOfCards
         private static int DefineValue(string card)
         {
             var result = 0;
-            var from2To10 = int.TryParse(card[0].ToString(), out result);
+            var power = card.Length > 2 ? card.Substring(0, 2).ToString() : card[0].ToString();
+            var type = card.Length > 2 ? card.Substring(2, 1).ToString() : card[1].ToString();
+
+            var from2To10 = int.TryParse(power, out result);
 
             if (!from2To10)
             {
@@ -71,7 +71,7 @@ namespace E05_HandsOfCards
                     default: break;
                 }
             }
-            switch (card[1].ToString())
+            switch (type)
             {
                 case "S": result *= 4; break;
                 case "H": result *= 3; break;
@@ -80,28 +80,6 @@ namespace E05_HandsOfCards
                 default: break;
             }
             return result;
-        }
-        private static Dictionary<string, string> RemoveRepeatedCards(Dictionary<string, string> playersCards)
-        {
-            var result = new Dictionary<string, string>();
-            
-            foreach (var player in playersCards)
-            {
-                var groupedCards = player.Value.Split(
-                    new char[] { ' ', ',', ':' },
-                    StringSplitOptions.RemoveEmptyEntries)
-                    .GroupBy(x => x).ToArray();
-                                
-                var cards = string.Empty;
-                foreach (var card in groupedCards)
-                {
-                    cards = string.Concat(cards + " ", card.Key);
-                }
-
-                var name = player.Key;
-                result[name] = cards;
-            }
-            return result;
-        }
+        }        
     }
 }
