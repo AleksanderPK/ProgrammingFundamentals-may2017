@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E04_FixEmails", "E04_FixEma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E05_HandsOfCards", "E05_HandsOfCards\E05_HandsOfCards.csproj", "{3A2CFB18-2E67-43AC-A563-6754D1DAFF1E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E06_UserLogs", "E06_UserLogs\E06_UserLogs.csproj", "{EAC80EF1-A5C7-43DD-A1A4-CF002A873D83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{3A2CFB18-2E67-43AC-A563-6754D1DAFF1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A2CFB18-2E67-43AC-A563-6754D1DAFF1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A2CFB18-2E67-43AC-A563-6754D1DAFF1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAC80EF1-A5C7-43DD-A1A4-CF002A873D83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAC80EF1-A5C7-43DD-A1A4-CF002A873D83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAC80EF1-A5C7-43DD-A1A4-CF002A873D83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAC80EF1-A5C7-43DD-A1A4-CF002A873D83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

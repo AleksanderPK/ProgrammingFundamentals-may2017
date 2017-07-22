@@ -14,7 +14,7 @@ namespace E05_HandsOfCards
             foreach (var player in playersCards)
             {
                 Console.WriteLine($"{player.Key} - > {ConvertCardsInPoints(player.Value)}");
-            }                        
+            }
         }
 
         private static void GetHandsOfCards(Dictionary<string, List<string>> playersCards)
