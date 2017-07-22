@@ -26,7 +26,8 @@ namespace E07_PopulationCounter
             }
         }
 
-        private static Dictionary<string, Dictionary<string, int>> SortData(Dictionary<string, Dictionary<string, int>> counrtyData)
+        private static Dictionary<string, Dictionary<string, int>> SortData(
+            Dictionary<string, Dictionary<string, int>> counrtyData)
         {
             var sortedData = new Dictionary<string, Dictionary<string, int>>();
 
@@ -44,7 +45,8 @@ namespace E07_PopulationCounter
             return sortedData;
         }
 
-        private static void GetData(Dictionary<string, Dictionary<string, int>> counrtyData)
+        private static void GetData(
+            Dictionary<string, Dictionary<string, int>> counrtyData)
         {
             var input = Console.ReadLine();
 
@@ -60,15 +62,12 @@ namespace E07_PopulationCounter
                     counrtyData[country] = new Dictionary<string, int>();
                 }
 
-                if (counrtyData[country].ContainsKey(city))
+                if (!counrtyData[country].ContainsKey(city))
                 {
-                    counrtyData[country][city] = counrtyData[country][city] += popultation;
+                    counrtyData[country][city] = 0;
                 }
-                else
-                {
-                    counrtyData[country][city] = popultation;
-                }
-                
+
+                counrtyData[country][city] += popultation;
                 input = Console.ReadLine();
             }
         }
